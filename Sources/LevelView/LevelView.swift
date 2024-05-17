@@ -3,13 +3,13 @@
 
 import SwiftUI
 
-struct LevelView: View {
+public struct LevelView: View {
     let level: Int
     let maxLevel: Int
     let color: Color
     let accessibilityLabel: String
     
-    var body: some View {
+    public var body: some View {
         HStack {
             ForEach(0 ..< level, id: \.self) { number in
                 Image(systemName: "circle.fill")
