@@ -9,6 +9,13 @@ public struct LevelView: View {
     let color: Color
     let accessibilityLabel: String
     
+    public init(level: Int, maxLevel: Int, color: Color, accessibilityLabel: String) {
+        self.level = level
+        self.maxLevel = maxLevel
+        self.color = color
+        self.accessibilityLabel = accessibilityLabel
+    }
+    
     public var body: some View {
         HStack {
             ForEach(0 ..< level, id: \.self) { number in
