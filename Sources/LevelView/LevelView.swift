@@ -3,11 +3,19 @@
 
 import SwiftUI
 
+/// The view that displays level e.g. experience level.
+///
+/// - Parameters:
+///   - level: The require level.
+///   - maxLevel: The maximum level.
+///   - color: The color of dots.
+///   - accessibilityLabel: The accessbility label.
+///
 public struct LevelView: View {
-    let level: Int
-    let maxLevel: Int
-    let color: Color
-    let accessibilityLabel: String
+    private let level: Int
+    private let maxLevel: Int
+    private let color: Color
+    private let accessibilityLabel: String
     
     public init(level: Int, maxLevel: Int, color: Color, accessibilityLabel: String) {
         self.level = level
@@ -27,6 +35,7 @@ public struct LevelView: View {
                 Image(systemName: "circle")
                     .foregroundStyle(color)
             }
+            
         }
         .accessibilityElement(children: .ignore)
         .accessibilityIdentifier("Level")
